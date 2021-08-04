@@ -1,0 +1,11 @@
+## Interface: 90005
+## Author: 绿毛龟12138
+## Version: Alpha-v1.0
+## Title: |cFF00FFFFS|r|cFFFFC0CBp|r|cFFFF6347a|rUI
+## Notes: 暴雪界面功能增强
+## DefaultState: enabled
+## Dependencies: Scorpio,Scorpio.UI,Scorpio.Widget,Scorpio.Secure
+## SavedVariables: SpaUIConfigDB,SpaUIDatabase
+## SavedVariablesPerCharacter: SpaUIConfigDBChar
+
+SpaUI.xml

@@ -1,0 +1,20 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+    <!-- locales -->
+    <Include file="Localization\Localization.xml"/>
+    <!-- Core -->
+    <Include file="Core\Core.xml"/>
+    <!-- Config -->
+    <Include file="Config\Config.xml"/>
+    <!-- Features -->
+    <!-- <Include file="Features\Features.xml"/> -->
+    <!-- Social -->
+    <!-- <Include file="Social\Social.xml"/> -->
+    <!-- Quest -->
+    <!-- <Include file="Quest\Quest.xml"/> -->
+    <!-- ActionBar -->
+    <!-- <Include file="ActionBar\ActionBar.xml"/> -->
+    <!-- UnitFrames -->
+    <!-- <Include file="UnitFrames\UnitFrames.xml"/> -->
+    <!-- Database -->
+    <!-- <Include file="Database\Database.xml"/> -->
+</Ui>
