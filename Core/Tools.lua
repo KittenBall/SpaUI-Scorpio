@@ -22,6 +22,24 @@ function Log.Error(...)
     Log(Logger.LogLevel.Error, ...)
 end
 
+-- 调试模式打开/关闭
+__SystemEvent__()
+function SPAUI_DEBUGGABLE_CHANGED()
+    Log.LogLevel = _Config.Debuggable and Logger.LogLevel.Info or Logger.LogLevel.Error
+end
+
 function Dump(value, type)
     print(Toolset.tostring(value, type, false))
+end
+
+-- 显示红字错误
+__Arguments__{NEString}
+function ShowUIError(text)
+    UIErrorsFrame:AddMessage(text, 1.0, 0.0, 0.0, 1, 3)
+end
+
+-- 显示消息
+__Arguments__{NEString}
+function ShowMessage(text)
+    print(L["message_format"]:format(text))
 end

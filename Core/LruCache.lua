@@ -2,12 +2,8 @@ Scorpio "SpaUI" ""
 
 class "LruCache"(function(_ENV)
 
-    __Arguments__(NaturalNumber)
+    __Arguments__(PositiveNumber)
     function __new(_, capacity)
-        if capacity <= 0 then
-            capacity = 1
-        end
-
         local head = {}
         local tail = {}
         head.next = tail

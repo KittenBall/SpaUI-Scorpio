@@ -3,6 +3,8 @@
     <Include file="Localization\Localization.xml"/>
     <!-- Core -->
     <Include file="Core\Core.xml"/>
+    <!-- Widget -->
+    <Include file="Widget\Widget.xml"/>
     <!-- Config -->
     <Include file="Config\Config.xml"/>
     <!-- Features -->
