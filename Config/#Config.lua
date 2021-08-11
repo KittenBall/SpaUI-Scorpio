@@ -155,9 +155,9 @@ class "OptionsCheckButton" (function(_ENV)
     local function OnClick(self)
         local checked = self:GetChecked()
         if checked then
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
         else
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF);
+            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
         end
         self:OnValueChange(checked)
         ChangeChildrenEnabled(self)
@@ -247,11 +247,11 @@ class "CategoryListButton"(function(_ENV)
     local function ToggleChild(self, collapsed)
         local toggle = self:GetChild("Toggle")
         if collapsed then
-			toggle:SetNormalTexture("Interface\\Buttons\\UI-PlusButton-UP");
-			toggle:SetPushedTexture("Interface\\Buttons\\UI-PlusButton-DOWN");
+			toggle:SetNormalTexture("Interface\\Buttons\\UI-PlusButton-UP")
+			toggle:SetPushedTexture("Interface\\Buttons\\UI-PlusButton-DOWN")
         else
-			toggle:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP");
-			toggle:SetPushedTexture("Interface\\Buttons\\UI-MinusButton-DOWN");
+			toggle:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP")
+			toggle:SetPushedTexture("Interface\\Buttons\\UI-MinusButton-DOWN")
         end
         OnCollpasedChanged(self, collapsed)
     end
@@ -271,14 +271,14 @@ class "CategoryListButton"(function(_ENV)
         self:SetText(name)
         local toggle = self:GetChild("Toggle")
         if category.parent then
-            self:SetNormalFontObject(GameFontHighlightSmall);
-            self:SetHighlightFontObject(GameFontHighlightSmall);
+            self:SetNormalFontObject(GameFontHighlightSmall)
+            self:SetHighlightFontObject(GameFontHighlightSmall)
             self:GetFontString():SetPoint("LEFT", 16, 2)
             toggle:Hide()
             self:Hide()
         else
-            self:SetNormalFontObject(GameFontNormal);
-            self:SetHighlightFontObject(GameFontHighlight);
+            self:SetNormalFontObject(GameFontNormal)
+            self:SetHighlightFontObject(GameFontHighlight)
             self:GetFontString():SetPoint("LEFT", 8, 2)
             self:Show()
             if category.children then
@@ -293,13 +293,13 @@ class "CategoryListButton"(function(_ENV)
 
     local function OnDoubleClick(self)
         if self.Collapsed then
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
             self.Collapsed = not self.Collapsed
         end
     end
 
     local function OnToggleClick(self)
-        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
         local parent = self:GetParent()
         parent.Collapsed = not parent.Collapsed
     end

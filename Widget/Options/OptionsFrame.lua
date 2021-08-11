@@ -12,7 +12,7 @@ class "OptionsFrame"(function(_ENV)
     end
 
     local function OnHide(self)
-	    PlaySound(SOUNDKIT.GS_TITLE_OPTION_EXIT);
+	    PlaySound(SOUNDKIT.GS_TITLE_OPTION_EXIT)
     end
 
     local function OnShow(self)

@@ -25,9 +25,9 @@ class "OptionsCheckButton" (function(_ENV)
     local function OnClick(self)
         local checked = self:GetChecked()
         if checked then
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
         else
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF);
+            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_OFF)
         end
     end
 

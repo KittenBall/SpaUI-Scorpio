@@ -64,11 +64,13 @@ class "OptionsCategoryListButton"(function(_ENV)
             end
             self:SetEnabled(category.Enabled)
             if category.Level > 1 then
-                self:SetNormalFontObject(GameFontHighlightSmall);
-                self:SetHighlightFontObject(GameFontHighlightSmall);
+                self:SetNormalFontObject(GameFontHighlightSmall)
+                self:SetHighlightFontObject(GameFontHighlightSmall)
+                self:SetDisabledFontObject(GameFontDisableSmall)
             else
-                self:SetNormalFontObject(GameFontNormal);
-                self:SetHighlightFontObject(GameFontHighlight);
+                self:SetNormalFontObject(GameFontNormal)
+                self:SetHighlightFontObject(GameFontHighlight)
+                self:SetDisabledFontObject(GameFontDisable)
             end
             self:GetFontString():SetPoint("LEFT", category.Level*8, 2)
         else
@@ -82,23 +84,23 @@ class "OptionsCategoryListButton"(function(_ENV)
 
     local function OnDoubleClick(self)
         if self.Collapsed then
-            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+            PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
             self.Collapsed = not self.Collapsed
         end
     end
 
     local function OnToggleClick(self)
-        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
+        PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON)
         local parent = self:GetParent()
         if parent.category then
             parent.category.Collapsed = not parent.category.Collapsed
 
             if parent.category.Collapsed then
-			    self:SetNormalTexture("Interface\\Buttons\\UI-PlusButton-UP");
-			    self:SetPushedTexture("Interface\\Buttons\\UI-PlusButton-DOWN");
+			    self:SetNormalTexture("Interface\\Buttons\\UI-PlusButton-UP")
+			    self:SetPushedTexture("Interface\\Buttons\\UI-PlusButton-DOWN")
             else
-			    self:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP");
-			    self:SetPushedTexture("Interface\\Buttons\\UI-MinusButton-DOWN");
+			    self:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-UP")
+			    self:SetPushedTexture("Interface\\Buttons\\UI-MinusButton-DOWN")
             end
 
             OnCollapsedChanged(parent) 
@@ -131,7 +133,6 @@ Style.UpdateSkin("Default", {
                 Anchor("BOTTOMRIGHT", 0, 1)
             }
         },
-        disabledFont            = GameFontNormalGraySmall,
         buttonText              = {
             justifyH            = "LEFT",
             wordwrap            = false,
