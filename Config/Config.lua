@@ -79,6 +79,14 @@ function OnEnable()
     end
 end
 
+-- 进入战斗关闭面板
+__SystemEvent__("PLAYER_REGEN_DISABLED")
+function Hide()
+    if SpaUIConfigFrame then
+        SpaUIConfigFrame:Hide()
+    end
+end
+
 -- 创建配置面板
 __NoCombat__()
 function CreateConfigPanel()

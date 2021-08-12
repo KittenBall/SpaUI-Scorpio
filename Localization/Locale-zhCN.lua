@@ -8,18 +8,19 @@ if not L then return end
 L["addon_name"] = "|cFF00FFFFS|r|cFFFFC0CBp|r|cFFFF6347a|r|cffffd200UI|r"
 L["message_format"] = L["addon_name"]..":%s"
 L["version"] = "Scorpio:|cFF00BFFF%s|r "..L["addon_name"]..":|cFF00BFFF%s|r"
+------------------------------------------
 
-
----------- Universal String --------------
 L["error_in_combat"] = "你正在战斗中"
 L["debug_mode"] = "调试模式"
 L["debug_enable"] = "调试模式已启用，你可以输入命令\"/spa debug 0\"关闭"
 L["debug_disable"] = "调试模式已关闭，你可以输入命令\"/spa debug 1\"启用"
+L["addon_loaded_tip"] = "|cFF00BFFF%s|r 已载入，你可以输入|cFF00BFFF/spa|r获取帮助"
 
 ----------      Command    ---------------
 L["cmd_error"] = "请输入正确的命令"
 L["cmd_debug"] = "打开/关闭调试模式 0：关闭 1：打开"
 L["cmd_config"] = "打开/关闭配置面板"
+L["cmd_reload"] = "重载界面"
 
 
 ----------      Config     ---------------
